@@ -64,6 +64,18 @@
   .row { display: flex; justify-content: space-between; gap: 16px; }
   .row .when { color: var(--muted); white-space: nowrap; }
   footer { margin-top: 56px; font-size: 0.85rem; color: var(--muted); }
+
+  /* Draft placeholders: every one must be filled or removed before deploying */
+  .todo { background: #fff3bf; color: #5c4400; border-radius: 3px; padding: 0 4px; font-size: 0.92em; }
+  @media (prefers-color-scheme: dark) { .todo { background: #4a3d10; color: #ffe8a3; } }
+
+
+  /* About me */
+  .photos { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin: 18px 0 0; }
+  .photos figure { margin: 0; }
+  .photos img { width: 100%; aspect-ratio: 1 / 1; object-fit: cover; display: block; border-radius: 6px; }
+  .photos figcaption { font-size: 0.88rem; color: var(--muted); margin-top: 6px; }
+
   @media (max-width: 640px) {
     main { padding: 32px 16px 48px; }
     .intro { flex-direction: column-reverse; gap: 20px; }
@@ -71,6 +83,7 @@
     .pub { flex-direction: column; gap: 10px; }
     .pub .thumb { width: 100%; }
     .row { flex-direction: column; gap: 0; }
+    .photos { grid-template-columns: repeat(2, 1fr); }
   }
 </style>
 </head>
@@ -103,10 +116,12 @@
         <a href="mailto:chuanzou@alumni.upenn.edu">Email</a>
         <a href="files/Chuan_Zou_CV.pdf">CV</a>
         <a href="https://github.com/chuanzou">GitHub</a>
+        <a href="#about">About me</a>
       </div>
     </div>
     <img src="images/chuan.jpg" alt="Photo of Chuan Zou">
   </section>
+
 
   <h2>Research</h2>
 
@@ -166,7 +181,7 @@
   <ul class="plain">
     <li class="row"><span><strong>George Mason University</strong>, Research Intern</span><span class="when">Aug – Oct 2026</span></li>
     <li class="row"><span><strong>University of Notre Dame</strong>, Research Intern</span><span class="when">Jun – Aug 2026</span></li>
-    <li class="row"><span><strong>Center for Satellite Application Technology of Natural Resources</strong>, ML Intern</span><span class="when">Jun – Aug 2025</span></li>
+    <li class="row"><span><strong>Texas A&amp;M University</strong>, Computer Vision and AI Intern</span><span class="when">Aug – Dec 2025</span></li>
   </ul>
 
   <h2>Education</h2>
@@ -174,6 +189,32 @@
     <li class="row"><span><strong>University of Pennsylvania</strong>, M.S., Stuart Weitzman School of Design</span><span class="when">2024 – 2026</span></li>
     <li class="row"><span><strong>Tongji University</strong>, B.Eng., College of Architecture and Urban Planning</span><span class="when">2018 – 2024</span></li>
   </ul>
+
+  <h2 id="about">About me</h2>
+
+  <p>
+    Outside of research, I am a cheerful, outgoing person who loves travel, hiking, baking, and coffee.<br>
+    Fun fact: I am also a film photographer.
+  </p>
+
+  <div class="photos">
+    <figure>
+      <img src="images/about-photography.jpg" alt="Shopfronts on Orchard Street, New York, in falling snow at night, with a bicycle locked outside" loading="lazy">
+      <figcaption>My photography</figcaption>
+    </figure>
+    <figure>
+      <img src="images/about-hiking.jpg" alt="Autumn valley and mountains seen between pine trees on a hike" loading="lazy">
+      <figcaption>Travel and hiking</figcaption>
+    </figure>
+    <figure>
+      <img src="images/about-baking.jpg" alt="A strawberry tart with a chocolate crust on a wooden table, surrounded by flowers" loading="lazy" style="object-position: 50% 35%;">
+      <figcaption>Cooking and baking</figcaption>
+    </figure>
+    <figure>
+      <img src="images/about-coffee.jpg" alt="Matcha cheesecake and an iced matcha latte next to a laptop" loading="lazy">
+      <figcaption>Coffee and matcha</figcaption>
+    </figure>
+  </div>
 
   <footer>Last updated October 2026.</footer>
 </main>
